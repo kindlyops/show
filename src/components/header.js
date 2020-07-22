@@ -2,6 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
+import { logout, isLoggedIn, getCurrentUser } from "../utils/auth"
+import { Auth } from 'aws-amplify'
+import { navigate } from '@reach/router'
+
+const user = getCurrentUser()
 
 const NavLink = styled(Link)`
   color: #222;
@@ -50,6 +55,20 @@ const Header = () => (
       <NavLink to="/questions/" activeClassName="current-page">
         Ask a question
       </NavLink>
+      {
+        isLoggedIn() && (
+          [
+          <NavLink key="profile" to="/app/profile" activeClassName="current-page">{user.email}</NavLink>,
+          <NavLink key="login" to="/app/login" activeClassName="current-page"
+            onClick={
+              () => Auth.signOut().then(logout(() => navigate('/app/login'))).catch(err => console.log('eror:', err))
+            }
+          >Sign Out</NavLink>
+          ]
+        ) || (
+          <NavLink to="/app/login" activeClassName="current-page">Sign In</NavLink>
+        )
+      }
     </nav>
   </header>
 );
