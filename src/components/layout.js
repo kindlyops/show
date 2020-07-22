@@ -1,7 +1,8 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import Helmet from 'react-helmet';
-import Header from './header';
+import favicon from '../../static/favicon-96x96.png';
+import Header from './Header';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Layout = ({ children }) => {
@@ -68,6 +69,7 @@ const Layout = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <link rel='shortcut icon' type='image/png' href={favicon} />
       </Helmet>
       <Header />
       <main

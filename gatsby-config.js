@@ -15,13 +15,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-theme-amplify-cognito',
-      options: {
-        region: process.env.APP_REGION,
-        userPoolId: process.env.APP_POOL_ID,
-        userPoolWebClientId: process.env.APP_WEB_CLIENT_ID
-      }
-    },
   ],
 };
