@@ -2,7 +2,7 @@ import React from 'react';
 import { Global, css } from '@emotion/core';
 import Helmet from 'react-helmet';
 import favicon from '../../static/favicon-96x96.png';
-import Header from './Header';
+import Header from './header';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Layout = ({ children }) => {
