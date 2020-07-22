@@ -17,6 +17,7 @@
     "@emotion/styled": "^10.0.27",
     "@mdx-js/mdx": "^1.6.13",
     "@mdx-js/react": "^1.6.13",
+    "@webriq/gatsby-theme-amplify-cognito": "^1.1.0",
     "gatsby": "^2.18.6",
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-mdx": "^1.2.27",
