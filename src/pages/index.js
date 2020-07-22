@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby'
 import Amplify from 'aws-amplify'
-import config from '../aws-exports-ci'
+import config from '../aws-exports'
 import Layout from '../components/layout';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 
