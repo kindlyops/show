@@ -18,9 +18,9 @@ module.exports = {
     {
       resolve: 'gatsby-theme-amplify-cognito',
       options: {
-        region: process.env.AWS_DEFAULT_REGION,
-        userPoolId: process.env.AWS_POOL_ID,
-        userPoolWebClientId: process.env.AWS_WEB_CLIENT_ID
+        region: process.env.APP_REGION,
+        userPoolId: process.env.APP_POOL_ID,
+        userPoolWebClientId: process.env.APP_WEB_CLIENT_ID
       }
     },
   ],
