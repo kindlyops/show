@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
-import { navigate } from '@reach/router'
+import { Link, navigate} from 'gatsby'
 import { setUser, isLoggedIn } from '../utils/auth'
 import Error from './Error'
 import { Auth } from 'aws-amplify'
@@ -28,10 +27,9 @@ class Login extends React.Component {
         username: user.username
       }
       setUser(userInfo)
-      navigate("/app/home")
+      navigate("/")
     } catch (err) {
-      this.setState({ error: err })
-      console.log('error...: ', err)
+      this.setState({ error: "Bad Username Or Password" })
     }
   }
 
@@ -60,6 +58,7 @@ class Login extends React.Component {
           <div style={styles.button} onClick={this.login}>
             <span style={styles.buttonText}>Sign In</span>
           </div>
+          <button onClick={() => Auth.federatedSignIn({provider: 'Google'})}>Open Google</button>
         </div>
         <Link to="/app/signup">Sign Up</Link><br />
       </div>

@@ -61,7 +61,7 @@ const Header = () => (
           <NavLink key="profile" to="/app/profile" activeClassName="current-page">{user.email}</NavLink>,
           <NavLink key="login" to="/app/login" activeClassName="current-page"
             onClick={
-              () => Auth.signOut().then(logout(() => navigate('/app/login'))).catch(err => console.log('eror:', err))
+              () => Auth.signOut().then(logout(() => navigate('/app/login'))).catch(err => console.log('error:', err))
             }
           >Sign Out</NavLink>
           ]

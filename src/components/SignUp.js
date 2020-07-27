@@ -31,8 +31,7 @@ class SignUp extends React.Component {
       await Auth.signUp({ username, email, password, attributes: { email }})
       this.setState({ stage: 1 })
     } catch (err) {
-      this.setState({ error: err })
-      console.log('error signing up...', err)
+      this.setState({ error: "SignUp Error" })
     }
   }
 
@@ -43,7 +42,7 @@ class SignUp extends React.Component {
       alert('Successfully signed up!')
       navigate("/app/login")
     } catch (err) {
-      this.setState({ error: err })
+      this.setState({ error: "SignUp Error" })
       console.log('error confirming signing up...', err)
     }
   }
