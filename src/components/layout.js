@@ -63,6 +63,30 @@ const Layout = ({ children }) => {
           li {
             margin-top: 0.25rem;
           }
+
+          .socialButton {
+            border-radius: 2px;
+            height: 40px;
+            margin-bottom: 15px;
+            padding: 2px;
+            text-align: left;
+            width: 100%;
+            background: #4285F4;
+            color: #FFF;
+            font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 500;
+        }
+        .social-logo {
+          display: inline-block;
+          height:80%;
+          margin-right: 12px;
+          padding: 9px;
+          text-align:center;
+          vertical-align: middle;
+          background: #FFF;
+          border-radius: 2px;
+      }
+
         `}
       />
       <Helmet>
